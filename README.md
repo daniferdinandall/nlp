@@ -25,7 +25,14 @@ $ python training.py
 ```
 4. check output_dir get 4 file from there to iteung-ai plus daftar-slang from dataset
    ![image](https://github.com/mymyid/nlp/assets/11188109/33ffb73f-5c42-4ac5-8a1b-2d44349bf3a2)
-5. run testing.py if you want to test automatically
+5. Coba memakai model
+```python
+from iteung import reply
+message = input("Kamu: ")
+return_message, status = reply.botReply(message)
+print(f"ITeung: {return_message}")
+```
+6. run testing.py if you want to test automatically
 ```console
 $ python testing.py
 ```
