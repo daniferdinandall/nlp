@@ -118,8 +118,8 @@ model = Model([enc_inp, dec_inp], output)
 model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['accuracy'])
 model.summary()
 
-batch_size = 64
-epochs = 400
+batch_size = 10
+epochs = 1000
 model.fit([encoder_input_data_train, decoder_input_data_train],
           decoder_output_data_train,
           batch_size=batch_size,
