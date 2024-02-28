@@ -1,7 +1,7 @@
 from iteung import reply
 
 
-data = reply.get_val_data()
+""" data = reply.get_val_data()
 val_q = []
 val_a = []
 bot_a = []
@@ -20,7 +20,7 @@ bot_test_dataframe = pd.DataFrame(
     }
 )
 
-reply.bot_test_dataframe.to_csv('output_dir/test_result.csv', index=False)
+reply.bot_test_dataframe.to_csv('output_dir/test_result.csv', index=False) """
 
 while True:
     message = input("Kamu: ")

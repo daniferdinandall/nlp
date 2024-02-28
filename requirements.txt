@@ -5,3 +5,4 @@ Sastrawi
 tensorflow
 keras
 keras_preprocessing
+nltk
