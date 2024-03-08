@@ -1,4 +1,5 @@
 from iteung import reply
+import pandas as pd
 
 
 """ data = reply.get_val_data()
@@ -21,8 +22,28 @@ bot_test_dataframe = pd.DataFrame(
 )
 
 reply.bot_test_dataframe.to_csv('output_dir/test_result.csv', index=False) """
-
+listJawaban = []
+listAkurasi = []
+listPertanyaan = []
 while True:
     message = input("Kamu: ")
-    return_message, status = reply.botReply(message)
+    if message == "exit":
+
+        break
+    return_message, status , dec_outputs, akurasi= reply.botReply(message)
+    listJawaban.append(return_message)
+    listAkurasi.append(akurasi)
+    listPertanyaan.append(message)
+
     print(f"ITeung: {return_message}")
+
+# Membuat DataFrame menggunakan pandas
+df = pd.DataFrame({
+    'Pertanyaan': listPertanyaan,
+    'Jawaban': listJawaban,
+    'Akurasi': listAkurasi
+})
+
+# Menyimpan DataFrame ke dalam file Excel
+df.to_excel('hasil2_bot.xlsx', index=False)
+

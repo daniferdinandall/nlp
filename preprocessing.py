@@ -25,6 +25,7 @@ unknowns = ["gak paham","kurang ngerti","I don't know"]
 
 list_indonesia_slang = pd.read_csv('./dataset/daftar-slang-bahasa-indonesia.csv', header=None).to_numpy()
 
+print("damo")
 data_slang = {}
 for key, value in list_indonesia_slang:
     data_slang[key] = value

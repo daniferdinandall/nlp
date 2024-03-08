@@ -10,9 +10,9 @@ from keras.activations import softmax
 from keras.callbacks import ModelCheckpoint, TensorBoard
 from keras.layers import Embedding, LSTM, Dense, Bidirectional, Concatenate
 from keras.optimizers import RMSprop
-from keras.utils.np_utils import to_categorical
-from keras_preprocessing.sequence import pad_sequences
-from keras_preprocessing.text import Tokenizer
+from keras.utils import to_categorical
+from keras.preprocessing.sequence import pad_sequences
+from keras.preprocessing.text import Tokenizer
 
 sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True))
 
@@ -119,7 +119,7 @@ model.compile(optimizer=RMSprop(), loss='categorical_crossentropy', metrics=['ac
 model.summary()
 
 batch_size = 10
-epochs = 1000
+epochs = 700
 model.fit([encoder_input_data_train, decoder_input_data_train],
           decoder_output_data_train,
           batch_size=batch_size,
