@@ -6,16 +6,16 @@
 
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
-import io
-import os
+# import io
+# import os
 import re
-import requests
-import csv
-import datetime
-import numpy as np
+# import requests
+# import csv
+# import datetime
+# import numpy as np
 import pandas as pd
-import random
-import pickle
+# import random
+# import pickle
 
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
